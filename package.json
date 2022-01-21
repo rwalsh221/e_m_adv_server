@@ -1,0 +1,14 @@
+{
+  "name": "e_m_adv_server",
+  "version": "1.0.0",
+  "description": "server for e_m_adventures project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Walsh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
