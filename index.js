@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 
-const accomodationRoutes = require('./routes/accommodation');
+const accommodationRoutes = require('./routes/accommodationRoutes');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -23,4 +23,4 @@ app.listen(port, function () {
   console.log(`running server on port ${port}`);
 });
 
-app.use('/accomodation', accomodationRoutes);
+app.use('/accommodation', accommodationRoutes);
