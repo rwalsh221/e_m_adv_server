@@ -7,6 +7,10 @@ const accommodationRoutes = require('./routes/accommodationRoutes');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(bodyParser.json());
+
+mongoose.connect('mongodb://localhost/emadv', { useNewUrlParser: true });
+
 const db = mongoose.connection;
 
 if (!db) {
@@ -23,4 +27,4 @@ app.listen(port, function () {
   console.log(`running server on port ${port}`);
 });
 
-app.use('/accommodation', accommodationRoutes);
+app.use('/api', accommodationRoutes);

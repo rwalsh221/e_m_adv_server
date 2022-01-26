@@ -9,11 +9,16 @@ const accommodationSchema = new mongoose.Schema({
   },
 });
 
-const AccommodationSchema = (module.exports = mongoose.model(
-  'accommodation',
-  accommodationSchema
-));
+module.exports = mongoose.model('Accommodation', accommodationSchema);
 
-module.exports.get = function (callback, limit) {
-  AccommodationSchema.find(callback).limit(limit);
-};
+// const get = func
+
+// const get = (callback, limit) => {
+//   AccommodationSchema.find(callback).limit(limit);
+// };
+
+// module.exports = function get(callback, limit) {
+//   AccommodationSchema.find(callback).limit(limit);
+// };
+
+// module.exports = get;
