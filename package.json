@@ -2,7 +2,7 @@
   "name": "e_m_adv_server",
   "version": "1.0.0",
   "description": "server for e_m_adventures project",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,5 +14,8 @@
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "mongoose": "^6.1.7"
+  },
+  "devDependencies": {
+    "dotenv": "^15.0.0"
   }
 }
