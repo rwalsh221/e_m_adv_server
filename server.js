@@ -23,7 +23,7 @@ if (!db) {
   console.log('connected to db');
 }
 
-let port = process.env.port || 8080;
+let port = process.env.PORT || 8080;
 
 app.get('/', (req, res) => res.send('HELLOW FROM THE SERVER nodemon'));
 
