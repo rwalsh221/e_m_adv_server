@@ -45,8 +45,24 @@ exports.getAllAccommodation = async (req, res) => {
 // CREATE NEW ACCOMMODATION
 exports.newAccommodation = (req, res) => {
   let accommodation = new AccommodationModel();
-  accommodation.name = req.body.name;
-  accommodation.location = req.body.location;
+
+  accommodation.accommodationId = req.body.accommodationId;
+  accommodation.accommodationName = req.body.accommodationName;
+  accommodation.accommodationDescription.shortDescription =
+    req.body.shortDescription;
+  accommodation.accommodationDescription.longDescription =
+    req.body.longDescription;
+  accommodation.numGuests = req.body.numGuests;
+  accommodation.numBedrooms = req.body.numBedrooms;
+  accommodation.numBathrooms = req.body.numBathrooms;
+  accommodation.accommodationLocation.latlon.lat = req.body.lat;
+  accommodation.accommodationLocation.latlon.lon = req.body.lon;
+  accommodation.accommodationLocation.city = req.body.city;
+  accommodation.accommodationLocation.accommodationType =
+    req.body.accommodationType;
+  accommodation.accommodationLocation.accommodationSetting =
+    req.body.accommodationSetting;
+  accommodation.basePrice = req.body.basePrice;
 
   accommodation.save((err) => {
     if (err) {
