@@ -5,6 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const app = express();
 
 const accommodationRoutes = require('./routes/accommodationRoutes');
@@ -12,6 +13,8 @@ const accommodationRoutes = require('./routes/accommodationRoutes');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
+
+app.use(cors());
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 
