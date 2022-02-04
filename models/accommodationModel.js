@@ -18,6 +18,9 @@ const accommodationSchema = new mongoose.Schema({
   accommodationDescription: {
     shortDescription: { type: String, required: true },
     longDescription: { type: String, required: true },
+    features: { type: Array, required: true },
+    sharedAccommodation: { type: Boolean, required: true },
+    starAmenity: { type: String, required: true },
   },
   accommodationId: { type: String, required: true },
   accommodationLocation: {
@@ -31,9 +34,11 @@ const accommodationSchema = new mongoose.Schema({
   },
   accommodationName: { type: String, required: true },
   basePrice: { type: Number, required: true },
-  numGuests: { type: Number, required: true },
-  numBedrooms: { type: Number, required: true },
-  numBathrooms: { type: Number, required: true },
+  occupancy: {
+    numBathrooms: { type: Number, required: true },
+    numGuests: { type: Number, required: true },
+    bedroomInfo: { type: Array, required: true },
+  },
 });
 
 module.exports = mongoose.model('Accommodation', accommodationSchema);
