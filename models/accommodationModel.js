@@ -1,15 +1,25 @@
 const mongoose = require('mongoose');
 
 const accommodationSchema = new mongoose.Schema({
-  accommodationId: { type: String, required: true },
-  accommodationName: { type: String, required: true },
+  aboutHost: {
+    hostName: { type: String, required: true },
+    hostSince: { type: Number, required: true },
+    aboutHost: { type: String, required: true },
+    duringStay: { type: String, required: true },
+    superHost: { type: Boolean, required: true },
+    contactHost: {
+      languages: { type: Array, required: true },
+      responseTime: { type: { type: String, enum: ['hour', 'day'] } },
+      alwaysAvalible: { type: Boolean, required: true },
+      email: { type: String, required: true },
+      phone: { type: Number, required: true },
+    },
+  },
   accommodationDescription: {
     shortDescription: { type: String, required: true },
     longDescription: { type: String, required: true },
   },
-  numGuests: { type: Number, required: true },
-  numBedrooms: { type: Number, required: true },
-  numBathrooms: { type: Number, required: true },
+  accommodationId: { type: String, required: true },
   accommodationLocation: {
     latlon: {
       lat: { type: Number, required: true },
@@ -19,7 +29,11 @@ const accommodationSchema = new mongoose.Schema({
     accommodationType: { type: String, required: true },
     accommodationSetting: { type: String, required: true },
   },
+  accommodationName: { type: String, required: true },
   basePrice: { type: Number, required: true },
+  numGuests: { type: Number, required: true },
+  numBedrooms: { type: Number, required: true },
+  numBathrooms: { type: Number, required: true },
 });
 
 module.exports = mongoose.model('Accommodation', accommodationSchema);
