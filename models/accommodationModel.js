@@ -29,8 +29,10 @@ const accommodationSchema = new mongoose.Schema({
       lon: { type: Number, required: true },
     },
     city: { type: String, required: true },
+    country: { type: String, required: true },
     accommodationType: { type: String, required: true },
     accommodationSetting: { type: String, required: true },
+    locationDescription: { type: String, required: true },
   },
   accommodationName: { type: String, required: true },
   basePrice: { type: Number, required: true },
@@ -38,6 +40,13 @@ const accommodationSchema = new mongoose.Schema({
     numBathrooms: { type: Number, required: true },
     numGuests: { type: Number, required: true },
     bedroomInfo: { type: Array, required: true },
+  },
+  accommodationRules: {
+    checkIn: {
+      min: { type: Number, required: true },
+      max: { type: Number, required: true },
+    },
+    checkOut: { type: Number, required: true },
   },
 });
 
