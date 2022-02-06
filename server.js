@@ -9,6 +9,7 @@ const cors = require('cors');
 const app = express();
 
 const accommodationRoutes = require('./routes/accommodationRoutes');
+const hostRoutes = require('./routes/hostRoutes');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -35,3 +36,4 @@ app.listen(port, function () {
 });
 
 app.use('/api', accommodationRoutes);
+app.use('/api', hostRoutes);

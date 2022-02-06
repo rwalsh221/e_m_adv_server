@@ -52,7 +52,7 @@ exports.newAccommodation = (req, res) => {
     req.body.shortDescription;
   accommodation.accommodationDescription.longDescription =
     req.body.longDescription;
-  accommodation.numGuests = req.body.numGuests;
+  // accommodation.numGuests = req.body.numGuests;
   accommodation.occupancy.numBedrooms = req.body.numBedrooms;
   accommodation.occupancy.numBathrooms = req.body.numBathrooms;
   accommodation.occupancy.numGuests = req.body.numGuests;
@@ -74,6 +74,7 @@ exports.newAccommodation = (req, res) => {
   accommodation.accommodationRules.checkIn.min = req.body.checkInMin;
   accommodation.accommodationRules.checkIn.max = req.body.checkInMax;
   accommodation.accommodationRules.checkOut = req.body.checkOut;
+
   accommodation.save((err) => {
     if (err) {
       res.json(err);
