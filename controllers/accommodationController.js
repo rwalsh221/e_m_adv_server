@@ -53,8 +53,8 @@ exports.newAccommodation = (req, res) => {
   accommodation.accommodationDescription.longDescription =
     req.body.longDescription;
   accommodation.numGuests = req.body.numGuests;
-  accommodation.numBedrooms = req.body.numBedrooms;
-  accommodation.numBathrooms = req.body.numBathrooms;
+  accommodation.occupancy.numBedrooms = req.body.numBedrooms;
+  accommodation.occupancy.numBathrooms = req.body.numBathrooms;
   accommodation.accommodationLocation.latlon.lat = req.body.lat;
   accommodation.accommodationLocation.latlon.lon = req.body.lon;
   accommodation.accommodationLocation.city = req.body.city;
