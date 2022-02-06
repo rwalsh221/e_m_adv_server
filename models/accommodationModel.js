@@ -39,7 +39,7 @@ const accommodationSchema = new mongoose.Schema({
   occupancy: {
     numBathrooms: { type: Number, required: true },
     numGuests: { type: Number, required: true },
-    bedroomInfo: { type: Array, required: true },
+    bedroomInfo: { type: Array },
   },
   accommodationRules: {
     checkIn: {
