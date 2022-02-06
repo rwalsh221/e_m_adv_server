@@ -1,20 +1,20 @@
 const mongoose = require('mongoose');
 
 const accommodationSchema = new mongoose.Schema({
-  aboutHost: {
-    hostName: { type: String, required: true },
-    hostSince: { type: Number, required: true },
-    aboutHost: { type: String, required: true },
-    duringStay: { type: String, required: true },
-    superHost: { type: Boolean, required: true },
-    contactHost: {
-      languages: { type: Array, required: true },
-      responseTime: { type: { type: String, enum: ['hour', 'day'] } },
-      alwaysAvalible: { type: Boolean, required: true },
-      email: { type: String, required: true },
-      phone: { type: Number, required: true },
-    },
-  },
+  // aboutHost: {
+  //   hostName: { type: String, required: true },
+  //   hostSince: { type: Number, required: true },
+  //   aboutHost: { type: String, required: true },
+  //   duringStay: { type: String, required: true },
+  //   superHost: { type: Boolean, required: true },
+  //   contactHost: {
+  //     languages: { type: Array, required: true },
+  //     responseTime: { type: { type: String, enum: ['hour', 'day'] } },
+  //     alwaysAvalible: { type: Boolean, required: true },
+  //     email: { type: String, required: true },
+  //     phone: { type: Number, required: true },
+  //   },
+  // },
   accommodationDescription: {
     shortDescription: { type: String, required: true },
     longDescription: { type: String, required: true },

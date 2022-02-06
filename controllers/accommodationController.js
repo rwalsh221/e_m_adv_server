@@ -55,6 +55,7 @@ exports.newAccommodation = (req, res) => {
   accommodation.numGuests = req.body.numGuests;
   accommodation.occupancy.numBedrooms = req.body.numBedrooms;
   accommodation.occupancy.numBathrooms = req.body.numBathrooms;
+  accommodation.occupancy.numGuests = req.body.numGuests;
   accommodation.accommodationLocation.latlon.lat = req.body.lat;
   accommodation.accommodationLocation.latlon.lon = req.body.lon;
   accommodation.accommodationLocation.city = req.body.city;
@@ -69,6 +70,7 @@ exports.newAccommodation = (req, res) => {
   accommodation.accommodationDescription.starAmenity = req.body.starAmenity;
   accommodation.accommodationLocation.locationDescription =
     req.body.locationDescription;
+  accommodation.accommodationLocation.country = req.body.country;
   accommodation.accommodationRules.checkIn.min = req.body.checkInMin;
   accommodation.accommodationRules.checkIn.max = req.body.checkInMax;
   accommodation.accommodationRules.checkOut = req.body.checkOut;
