@@ -63,13 +63,15 @@ exports.newAccommodation = (req, res) => {
   accommodation.accommodationLocation.accommodationSetting =
     req.body.accommodationSetting;
   accommodation.basePrice = req.body.basePrice;
-  accommodationDescription.features = req.body.features;
-  accommodationDescription.sharedAccommodation = req.body.sharedAccommodation;
-  accommodationDescription.starAmenity = req.body.starAmenity;
-  accommodationLocation.locationDescription = req.body.locationDescription;
-  accommodationRules.checkIn.min = req.body.checkInMin;
-  accommodationRules.checkIn.max = req.body.checkInMax;
-  accommodationRules.checkOut = req.body.checkOut;
+  accommodation.accommodationDescription.features = req.body.features;
+  accommodation.accommodationDescription.sharedAccommodation =
+    req.body.sharedAccommodation;
+  accommodation.accommodationDescription.starAmenity = req.body.starAmenity;
+  accommodation.accommodationLocation.locationDescription =
+    req.body.locationDescription;
+  accommodation.accommodationRules.checkIn.min = req.body.checkInMin;
+  accommodation.accommodationRules.checkIn.max = req.body.checkInMax;
+  accommodation.accommodationRules.checkOut = req.body.checkOut;
   accommodation.save((err) => {
     if (err) {
       res.json(err);
