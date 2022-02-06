@@ -48,6 +48,7 @@ const accommodationSchema = new mongoose.Schema({
     },
     checkOut: { type: Number, required: true },
   },
+  accommodationReview: { type: Array },
 });
 
 module.exports = mongoose.model('Accommodation', accommodationSchema);
