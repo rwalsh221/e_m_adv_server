@@ -18,7 +18,7 @@ exports.getAllHost = async (req, res) => {
   }
 };
 
-// CREATE NEW ACCOMMODATION
+// CREATE NEW HOST
 exports.newHost = (req, res) => {
   let host = new HostModel();
 
